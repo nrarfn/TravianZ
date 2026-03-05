@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: travianz-web
     ports:
-      - "8080:80"
+      - "8083:80"
     volumes:
       - ./:/var/www/html
       - ./var:/var/www/html/var
@@ -46,7 +46,7 @@ services:
       PMA_USER: root
       PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
     ports:
-      - "8081:80"
+      - "8082:80"
     depends_on:
       - db
     networks:
